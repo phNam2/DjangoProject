@@ -1,0 +1,25 @@
+from django.db import models
+
+# Create your models here.
+class Manhattan(models.Model):
+	BOROUGH					= models.IntegerField()
+	NEIGHBORHOOD			= models.CharField(max_length=50)
+	BUILDING_CLASS_CATEGORY	= models.CharField(max_length=50)
+	TAX_CLASS				= models.CharField(max_length=5)
+	BLOCK					= models.IntegerField()
+	LOT						= models.IntegerField()
+	EASE_MENT				= models.CharField(blank=True, max_length=5)
+	BUILDING_CLASS_PRESENT	= models.CharField(max_length=2)
+	ADDRESS					= models.CharField(max_length=50)
+	APARTMENT_NUMBER		= models.CharField(max_length=10, blank=True)
+	ZIP_CODE				= models.IntegerField()
+	RESIDENTIAL_UNITS		= models.IntegerField()
+	COMMERCIAL_UNITS		= models.IntegerField()
+	TOTAL_UNITS				= models.IntegerField()
+	LAND_SQUARE_FEET		= models.IntegerField()
+	GROSS_SQUARE_FEET		= models.IntegerField()
+	YEAR_BUILT				= models.IntegerField()
+	TAX_CLASS_AT_SALE		= models.CharField(max_length=5)
+	BUILDING_CLASS_AT_SALE	= models.CharField(max_length=2)
+	SALE_PRICE				= models.CharField(max_length=20)
+	SALE_DATE				= models.DateField(auto_now=False, auto_now_add=True)
