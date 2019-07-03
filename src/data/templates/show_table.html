@@ -1,5 +1,67 @@
 {% extends "base.html" %}
 
 {% block body %}
-	<h1>This is from the show_table.html file</h1>
+	
+	<table class="table table-hover">
+	    <thead>
+	      <tr>
+	        <th>ID</th>
+	        <th>BOROUGH</th>
+	        <th>NEIGHBORHOOD</th>
+	        <th>BUILDING CLASS CATEGORY</th>
+	        <th>TAX CLASS</th>
+	        <th>BLOCK</th>
+	        <th>LOT</th>
+	        <th>EASE MENT</th>
+	        <th>BUILDING CLASS AT PRESENT</th>
+	        <th>ADDRESS</th>
+	        <th>APARTMENT NUMBER</th>
+	        <th>ZIP CODE</th>
+	        <th>RESIDENTIAL UNITS</th>
+	        <th>COMMERCIAL UNITS</th>
+	        <th>TOTAL UNITS</th>
+	        <th>LAND SQUARE FEET</th>
+	        <th>GROSS SQUARE FEET</th>
+	        <th>YEAR BUILT</th>
+	        <th>TAX CLASS AT SALE</th>
+	        <th>BUILDING CLASS AT SALE</th>
+	        <th>SALE PRICE</th>
+	        <th>SALE DATE</th>
+	        <th></th>
+	      </tr>
+	    </thead>
+
+	    <tbody>
+
+	      {% for item in items %}
+
+		    <tr>
+		    	<td>{{ item.id }}
+		        <td>{{ item.BOROUGH }}
+		        <td>{{ item.NEIGHBORHOOD }}</td>
+		        <td>{{ item.BUILDING_CLASS_CATEGORY }} $</td>
+		        <td>{{ item.TAX_CLASS }}</td>
+		        <td>{{ item.BLOCK }}</td>
+		        <td>{{ item.LOT }}</td>
+		        <td>{{ item.EASE_MENT }}</td>
+		        <td>{{ item.BUILDING_CLASS_PRESENT }}</td>
+		        <td>{{ item.ADDRESS }}</td>
+		        <td>{{ item.APARTMENT_NUMBER }}</td>
+		        <td>{{ item.ZIP_CODE }}</td>
+		        <td>{{ item.RESIDENTIAL_UNITS }}</td>
+		        <td>{{ item.COMMERCIAL_UNITS }}</td>
+		        <td>{{ item.TOTAL_UNITS }}</td>
+		        <td>{{ item.LAND_SQUARE_FEET }}</td>
+		        <td>{{ item.GROSS_SQUARE_FEET }}</td>
+		        <td>{{ item.YEAR_BUILT }}</td>
+		        <td>{{ item.TAX_CLASS_AT_SALE }}</td>
+		        <td>{{ item.BUILDING_CLASS_AT_SALE }}</td>
+		        <td>{{ item.SALE_PRICE }}</td>
+		        <td>{{ item.SALE_DATE }}</td>
+		    </tr>
+
+	      {% endfor %}
+	    </tbody>
+	</table>
+
 {% endblock %}
