@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # own
     'import_export',
     'data',
-
+    'server_side',
 ]
 
 MIDDLEWARE = [
