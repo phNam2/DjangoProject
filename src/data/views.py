@@ -8,3 +8,6 @@ def table_view(request, *args, **kwargs):
         'items': items,
 	}
 	return render(request, "show_table.html", context)
+
+def base(request, *args, **kwargs):
+	return render(request, "base.html", {})
