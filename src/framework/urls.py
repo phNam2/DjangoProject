@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from data.views import table_view, base
+from server_side.views import server
 
 urlpatterns = [
 	path('', base, name='home'),
 	path('table/', table_view),
+	path('server/', server),
     path('admin/', admin.site.urls),
 ]
